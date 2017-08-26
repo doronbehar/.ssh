@@ -7,6 +7,10 @@ Host gitlab.com
   User git
   HostName gitlab.com
   IdentityFile ~/.ssh/gitlab
+Host bitbucket.org
+  User git
+  HostName bitbucket.org
+  IdentityFile ~/.ssh/bitbucket
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
