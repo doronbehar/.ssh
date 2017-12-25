@@ -1,4 +1,5 @@
 AddKeysToAgent yes
+Include ~/.ssh/config.LAN
 Host github.com
   User git
   HostName github.com
@@ -14,4 +15,3 @@ Host bitbucket.org
 Host aur.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
-Include ~/.ssh/config.LAN
