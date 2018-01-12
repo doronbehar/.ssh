@@ -16,3 +16,8 @@ Host aur.archlinux.org
 Host aur4.archlinux.org
   IdentityFile ~/.ssh/aur
   User aur
+Host sourceforge.net
+  IdentityFile ~/.ssh/sourceforge
+  User aur
+
+# vim:ft=sshconfig
