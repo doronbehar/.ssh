@@ -1,2 +1,3 @@
 AddKeysToAgent yes
+SendEnv SSH_*
 Include ~/.ssh/config.d/**/**.conf
