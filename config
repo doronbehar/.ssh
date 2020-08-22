@@ -2,3 +2,6 @@ Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"
 AddKeysToAgent yes
 Include ~/.ssh/config.d/**/**.conf
 SendEnv SSH_ORIGINAL_TERM
+
+Host *
+  IdentitiesOnly yes
