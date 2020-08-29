@@ -1,9 +1,3 @@
 *
 !README.md
 !config
-!config.d/
-config.d/*
-!config.d/hosts/
-config.d/hosts/*
-!config.d/hosts/git
-config.d
