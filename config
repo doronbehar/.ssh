@@ -2,7 +2,7 @@ Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"
 AddKeysToAgent yes
 # Tracked not publicly
 Include ~/.ssh/config.d/hosts.conf
-SendEnv SSH_ORIGINAL_TERM
+SendEnv SSH_ORIGINAL_TERM SSH_TERM_NO_ICONS_FONT
 
 Host *
   IdentitiesOnly yes
