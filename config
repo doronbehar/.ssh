@@ -6,3 +6,7 @@ SendEnv SSH_ORIGINAL_TERM SSH_TERM_NO_ICONS_FONT
 
 Host *
   IdentitiesOnly yes
+# For GitHub's wide range of IP addresses, see:
+# https://github.com/orgs/community/discussions/27405
+Host 140.82.*
+  StrictHostKeyChecking no
