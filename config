@@ -1,4 +1,4 @@
-Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye"
+Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye || :"
 AddKeysToAgent yes
 # Tracked not publicly
 Include ~/.ssh/config.d/hosts.conf
