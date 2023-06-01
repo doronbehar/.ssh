@@ -1,12 +1,50 @@
 Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye || :"
 AddKeysToAgent yes
-# Tracked not publicly
-Include ~/.ssh/config.d/hosts.conf
 SendEnv SSH_ORIGINAL_TERM SSH_TERM_NO_ICONS_FONT
 
-Host *
+# {{{1 Git hosts
+Host github.com
+  User git
+  HostName github.com
+  IdentityFile ~/.ssh/github
+Host gitlab.com
+  User git
+  HostName gitlab.com
+  IdentityFile ~/.ssh/gitlab
   IdentitiesOnly yes
-# For GitHub's wide range of IP addresses, see:
-# https://github.com/orgs/community/discussions/27405
-Host 140.82.*
-  StrictHostKeyChecking no
+Host bitbucket.org
+  User git
+  HostName bitbucket.org
+  IdentityFile ~/.ssh/bitbucket
+Host aur.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur
+Host aur4.archlinux.org
+  IdentityFile ~/.ssh/aur
+  User aur
+Host sourceforge.net
+  IdentityFile ~/.ssh/sourceforge
+  User aur
+Host review.jami.net
+  IdentityFile ~/.ssh/review.jami.net
+  User doronbehar
+  Port 29420
+Host git.balena-cloud.com
+  IdentityFile ~/.ssh/balena
+  User gh_doronbehar
+Host gitlab.gnome.org
+  IdentityFile ~/.ssh/gitlab.gnome.org
+  User git
+Host invent.kde.org
+  IdentityFile ~/.ssh/invent.kde.org
+  User git
+
+# {{{1 Office PC - via reverse ssh tunnel
+# Credit: https://unix.stackexchange.com/a/46271/135796
+host office
+  ProxyCommand ssh -fWlocalhost:22222 vps.doronbehar.com
+  IdentityFile ~/.ssh/office
+  SendEnv SSH_TMUX_ATTACH
+  User doronbehar
+
+# vim:ft=sshconfig:foldmethod=marker
