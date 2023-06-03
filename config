@@ -39,19 +39,7 @@ Host invent.kde.org
   IdentityFile ~/.ssh/invent.kde.org
   User git
 
-# {{{1 Office PC - via reverse ssh tunnel
-# Credit: https://unix.stackexchange.com/a/46271/135796
-Match exec "hostname | grep -q -E '(ZENIX|NUX)'" host office
-  ProxyCommand ssh -fWlocalhost:22222 vps.doronbehar.com
-  IdentityFile ~/.ssh/office
-  SendEnv SSH_TMUX_ATTACH
-  User doronbehar
-Match exec "hostname | grep -q vps" host office
-  HostName localhost
-  Port 22222
-  IdentityFile ~/.ssh/office
-  SendEnv SSH_TMUX_ATTACH
-  User doronbehar
+Include ~/.ssh/office/config
 
 
 # vim:ft=sshconfig:foldmethod=marker
