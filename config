@@ -1,4 +1,3 @@
-Match host * exec "gpg-connect-agent UPDATESTARTUPTTY /bye || :"
 AddKeysToAgent yes
 SendEnv SSH_ORIGINAL_TERM SSH_TERM_NO_ICONS_FONT
 
