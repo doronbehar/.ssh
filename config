@@ -38,7 +38,5 @@ Host invent.kde.org
   IdentityFile ~/.ssh/invent.kde.org
   User git
 
-Include ~/.ssh/office/config
-
 
 # vim:ft=sshconfig:foldmethod=marker
