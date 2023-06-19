@@ -1,5 +1,6 @@
 AddKeysToAgent yes
 SendEnv SSH_ORIGINAL_TERM SSH_TERM_NO_ICONS_FONT
+Include ~/.ssh/tmate.conf
 
 # {{{1 Git hosts
 Host github.com
