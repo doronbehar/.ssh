@@ -12,6 +12,11 @@ Host gitlab.com
   HostName gitlab.com
   IdentityFile ~/.ssh/gitlab
   IdentitiesOnly yes
+Host codeberg.org
+  User git
+  HostName codeberg.org
+  IdentityFile ~/.ssh/codeberg
+  IdentitiesOnly yes
 Host bitbucket.org
   User git
   HostName bitbucket.org
