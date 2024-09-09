@@ -47,6 +47,16 @@ Host gitlab.gnome.org
 Host invent.kde.org
   IdentityFile ~/.ssh/invent.kde.org
   User git
+Host darwin-build-box.nix-community.org
+  User doronbehar
+  HostName darwin-build-box.nix-community.org
+  IdentityFile ~/.ssh/darwin-build-box.nix-community.org
+  IdentitiesOnly yes
+Host build-box.nix-community.org
+  User doronbehar
+  HostName build-box.nix-community.org
+  IdentityFile ~/.ssh/build-box.nix-community.org
+  IdentitiesOnly yes
 
 
 # vim:ft=sshconfig:foldmethod=marker
