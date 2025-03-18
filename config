@@ -57,6 +57,10 @@ Host build-box.nix-community.org
   HostName build-box.nix-community.org
   IdentityFile ~/.ssh/build-box.nix-community.org
   IdentitiesOnly yes
-
+Host office
+  ProxyCommand ssh build-box.nix-community.org -W localhost:2222
+  User doron
+  IdentityFile ~/.ssh/office
+  IdentitiesOnly yes
 
 # vim:ft=sshconfig:foldmethod=marker
