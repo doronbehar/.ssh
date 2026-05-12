@@ -52,16 +52,21 @@ Host darwin-build-box.nix-community.org
   HostName darwin-build-box.nix-community.org
   IdentityFile ~/.ssh/darwin-build-box.nix-community.org
   IdentitiesOnly yes
+  # Overrides what's in /etc/ssh/ssh_config, see:
+  # https://gitlab.com/doronbehar/nixos-configs/-/blob/master/builders.nix
+  ControlPath none
 Host build-box.nix-community.org
   User doronbehar
   HostName build-box.nix-community.org
   IdentityFile ~/.ssh/build-box.nix-community.org
   IdentitiesOnly yes
+  ControlPath none
 Host aarch64-build-box.nix-community.org
   User doronbehar
   HostName aarch64-build-box.nix-community.org
   IdentityFile ~/.ssh/build-box.nix-community.org
   IdentitiesOnly yes
+  ControlPath none
 Host office
   ProxyCommand ssh build-box.nix-community.org -W localhost:2222
   User doron
