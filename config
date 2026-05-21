@@ -72,5 +72,21 @@ Host office
   User doron
   IdentityFile ~/.ssh/office
   IdentitiesOnly yes
+Host jukebox
+  User doron
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/jukebox
+  HostName jukebox.local
+  # host key changes all the time whenever I flush a new SD
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+Host jukebox-vm
+  User doron
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/jukebox
+  HostName localhost
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
 
 # vim:ft=sshconfig:foldmethod=marker
