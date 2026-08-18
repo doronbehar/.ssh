@@ -72,6 +72,16 @@ Host ZENIX
   User doron
   IdentityFile ~/.ssh/ZENIX
   IdentitiesOnly yes
+  # No need for `ControlPath none` since ZENIX is not configured as a remote
+  # builder of office host.
+Host office
+  ProxyCommand ssh build-box.nix-community.org -- nc -U /home/doronbehar/.ssh-bridge-office.sock
+  User doron
+  IdentityFile ~/.ssh/office
+  IdentitiesOnly yes
+  # Overrides what's in /etc/ssh/ssh_config, see:
+  # https://gitlab.com/doronbehar/nixos-configs/-/blob/master/builders.nix
+  ControlPath none
 Host jukebox
   User doron
   IdentitiesOnly yes
