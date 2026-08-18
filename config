@@ -67,10 +67,10 @@ Host aarch64-build-box.nix-community.org
   IdentityFile ~/.ssh/build-box.nix-community.org
   IdentitiesOnly yes
   ControlPath none
-Host office
-  ProxyCommand ssh build-box.nix-community.org -W localhost:2222
+Host ZENIX
+  ProxyCommand ssh build-box.nix-community.org -- nc -U /home/doronbehar/.ssh-bridge-ZENIX.sock
   User doron
-  IdentityFile ~/.ssh/office
+  IdentityFile ~/.ssh/ZENIX
   IdentitiesOnly yes
 Host jukebox
   User doron
