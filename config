@@ -88,5 +88,13 @@ Host jukebox-vm
   Port 2222
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
+Host lab-fpga
+  User root
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/lab-fpga
+  HostName fpga.local
+  # host key changes all the time whenever I flush a new SD
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
 
 # vim:ft=sshconfig:foldmethod=marker
