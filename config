@@ -79,6 +79,8 @@ Host office
   User doron
   IdentityFile ~/.ssh/office
   IdentitiesOnly yes
+  # Same reasoning as in `~/repos/nixos-configs/builders.nix`
+  ConnectTimeout = 5
   # Overrides what's in /etc/ssh/ssh_config, see:
   # https://gitlab.com/doronbehar/nixos-configs/-/blob/master/builders.nix
   ControlPath none
