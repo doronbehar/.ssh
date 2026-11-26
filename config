@@ -85,7 +85,11 @@ Host office
   # https://gitlab.com/doronbehar/nixos-configs/-/blob/master/builders.nix
   ControlPath none
 Host lab
-  ProxyCommand ssh build-box.nix-community.org -- nc -U /home/doronbehar/.ssh-bridge-lab.sock
+  # Reaches the host through the build-box bridge *and* starts the clipboard
+  # servers that the forwards below expose on lab - see the script.
+  ProxyCommand ~/.ssh/lab-proxy.zsh
+  RemoteForward 127.0.0.1:15299 127.0.0.1:15299
+  RemoteForward 127.0.0.1:15300 127.0.0.1:15300
   User owner
   IdentityFile ~/.ssh/lab
   IdentitiesOnly yes
